@@ -1,0 +1,81 @@
+
+package javaapplication1;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class JavaApplication1 {
+    public static void main(String[] args) {
+        Connection con = null;
+        Statement stmt = null;
+        try {
+            Class.forName("org.apache.derby.jdbc.ClientDriver");
+            con = DriverManager.getConnection("jdbc:derby://localhost:1527/college", "meet", "meet");
+            System.out.println("Connection created");
+            stmt = con.createStatement();
+            System.out.println("Statement created");
+            String createTable = "CREATE TABLE library (" +
+                    "sname VARCHAR(20), " +
+                    "rollno INT, " +
+                    "gender VARCHAR(10), " +
+                    "className VARCHAR(10), " +
+                    "bookname VARCHAR(20), " +
+                    "authorname VARCHAR(20), " +
+                    "issuedate VARCHAR(15), " +
+                    "returndate VARCHAR(15))";
+            stmt.executeUpdate(createTable);
+            System.out.println("Table created");
+            String insertQuery = "INSERT INTO library VALUES " +
+                    "('meet', 1, 'male', 'SY', 'Java', 'Gauri', '2 Feb', '9 Feb')";
+            stmt.executeUpdate(insertQuery);
+            System.out.println("Record inserted");
+        } catch (ClassNotFoundException e) {
+            System.out.println("Driver not found: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("SQL Error: " + e.getMessage());
+        } finally {
+            try {
+                if (stmt != null) stmt.close();
+                if (con != null) con.close();
+                System.out.println("Connection closed");
+            } catch (SQLException e) {
+                System.out.println("Error closing connection: " + e.getMessage());
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+theory - 
+
+
+**Database:**
+A **database** is an organized collection of data that can be **easily accessed, managed, and updated**.
+
+**JDBC (Java Database Connectivity):**
+JDBC is a **Java API** used to **connect Java applications to databases** and execute SQL queries. It is part of **Java SE** and uses **JDBC drivers** to establish the connection between Java and various databases.
+
+---
+
+Steps to Create a Database in NetBeans IDE 8.0.1
+
+1. Open the **Services** tab.
+2. Expand the **Databases** option.
+3. Right-click on **Java DB → Create Database**.
+4. Enter the **Database Name**, **Username**, and **Password**, then click **OK**.
+5. Right-click on **jdbc:derby://localhost:1527/YourDatabase** and select **Connect**.
+6. Switch to the **Projects** tab and create a **new Java Application**.
+7. Write your **JDBC code** in the Java class.
+8. Add the **Java DB driver** to your project library.
+9. **Run the program** to connect and interact with the database.
+
+
+

@@ -1,0 +1,81 @@
+// Save this file as InheritanceDemo.java
+
+// Parent class
+class Vehicle {
+    String brand;
+
+    // Constructor
+    Vehicle(String brand) {
+        this.brand = brand;
+    }
+
+    // Method to display brand
+    void showBrand() {
+        System.out.println("Vehicle Brand: " + brand);
+    }
+}
+
+// Child class
+class Car extends Vehicle {
+    String model;
+
+    // Constructor using super() to call parent constructor
+    Car(String brand, String model) {
+        super(brand);
+        this.model = model;
+    }
+
+    // Method to display model
+    void showModel() {
+        System.out.println("Car Model: " + model);
+    }
+}
+
+// Main class
+public class InheritanceDemo {
+    public static void main(String[] args) {
+        // Creating an object of the child class
+        Car myCar = new Car("Aston Martin", "Valkyrie");
+
+        // Calling parent and child class methods
+        myCar.showBrand();
+        myCar.showModel();
+    }
+}
+
+
+
+
+
+
+theory-
+
+Inheritance is one of the core principles of Object-Oriented Programming (OOP). It allows a class (called a subclass or child class) to acquire the properties and behaviors (fields and methods) of another class (called a superclass or parent class).
+
+Inheritance promotes code reusability, method overriding, and helps establish a natural hierarchy between classes.
+
+Types of Inheritance in Java
+
+• Single Inheritance
+One class inherits from a single superclass.
+Example:
+
+class B extends A { }
+
+
+• Multilevel Inheritance
+A class inherits from another derived class, forming a chain.
+Example:
+
+class A { }
+class B extends A { }
+class C extends B { }
+
+
+• Hierarchical Inheritance
+Multiple classes inherit from a single parent class.
+Example:
+
+class A { }
+class B extends A { }
+class C extends A { }

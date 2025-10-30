@@ -1,0 +1,100 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isErrorPage="true" %>
+<%@ page import="java.util.Date" %>
+<html>
+<head>
+  <title>JSP Implicit & Explicit Objects</title>
+</head>
+<body>
+
+<%
+String name = request.getParameter("name");
+if (name == null || name.trim().equals("")) {
+    name = "Guest";
+}
+response.setContentType("text/html");
+out.println("<h3>Hello, " + name + "</h3>");
+session.setAttribute("username", name);
+application.setAttribute("appTitle", "Simple JSP Demo");
+out.println("<p>Servlet Name: " + config.getServletName() + "</p>");
+out.println("<p>Application Title: " + application.getAttribute("appTitle") + "</p>");
+out.println("<p>Page Object: " + page.getClass().getName() + "</p>");
+if (exception != null) {
+    out.println("<p><b>Exception:</b> " + exception.getMessage() + "</p>");
+} else {
+    out.println("<p>No exception on this page.</p>");
+}
+Date date = new Date();
+out.println("<p>Current Date and Time: " + date.toString() + "</p>");
+%>
+
+<form method="get" action="example.jsp">
+  <label>Enter your name:</label>
+  <input type="text" name="name" />
+  <input type="submit" value="Submit" />
+</form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+theory -
+
+
+JavaServer Pages (JSP) is a server-side technology used to create dynamic web applications. It allows developers to embed Java code directly into HTML pages, making web development easier and more efficient. JSP is considered an advanced version of Servlets, offering better scalability and maintainability.
+
+Features
+
+Platform-independent – Write once, run anywhere.
+
+Simplifies database interactions for dynamic content.
+
+Provides predefined objects like request, response, and session.
+
+Has built-in error and exception handling.
+
+Supports custom tags and tag libraries for reusable components.
+
+
+JSP Implicit Objects
+
+Predefined Java objects automatically available in a JSP page to simplify coding:
+
+request: Accesses client data and parameters.
+
+response: Sends output and sets response headers.
+
+out: Writes content to the client’s browser.
+
+session: Manages user data across multiple requests.
+
+application: Shares data across all users and sessions.
+
+config: Accesses JSP or servlet initialization parameters.
+
+pageContext: Provides access to all other implicit objects and scope management.
+
+page: Refers to the current JSP page instance.
+
+exception: Handles exceptions (available only on error pages).
+
+
+
+JSP Explicit Objects
+
+Explicit objects are manually created Java class instances within a JSP page using standard Java code.

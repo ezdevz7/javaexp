@@ -1,0 +1,34 @@
+class Calculator {
+    void add(int a, int b) {
+        System.out.println("Sum: " + (a + b));
+    }
+    void add(double a, double b) {
+        System.out.println("Sum: " + (a + b));
+    }
+    void add(String a, String b) {
+        System.out.println("Concatenation: " + (a + b));
+    }
+    public static void main(String[] args) {
+        Calculator c = new Calculator();
+        c.add(5, 10);
+        c.add(2.5, 3.5);
+        c.add("Hello", "Java");
+    }
+}
+
+
+
+
+
+
+theory-
+
+
+Java is a high-level, object-oriented, and platform-independent programming language. It provides many powerful features that make it widely used in software development. The main features of Java are Encapsulation, Inheritance, Polymorphism, and Abstraction.
+
+Polymorphism means "many forms." It allows the same function or method name to behave differently based on the context—such as the number or type of arguments, or the type of object that invokes it.
+
+
+• Method Overloading (Compile-Time Polymorphism)
+Having multiple methods with the same name but different parameter lists within the same class is called method overloading. It allows a class to perform similar operations with different types or numbers of inputs.
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email Validation</title>
+  <script>
+    function validateEmail() {
+      let email = prompt("Please enter your email address:");
+
+      // Regex for simple email validation
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      // Keep asking until a valid email is entered
+      while (true) {
+        if (emailPattern.test(email)) {
+          alert("Email is valid: " + email);
+          break;
+        } else {
+          alert("Invalid email! Please enter a valid format (example: user@example.com).");
+          email = prompt("Re-enter your email address:");
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>Email Validation Example</h2>
+  <button onclick="validateEmail()">Enter Email</button>
+</body>
+</html>
+
+
+
+
+
+
+theory - 
+
+
+JavaScript is a high-level, interpreted, object-oriented programming language used to add interactivity and dynamic behavior to websites. It was developed by Brendan Eich in 1995 at Netscape and is now one of the core technologies of the web, along with HTML and CSS.
+
+Key Features of JavaScript--
+
+Client-Side Execution: Runs directly in the user’s browser without server interaction.
+
+Interpreted Language: Executes line by line, no need for compilation.
+
+Lightweight & Fast: Optimized for quick execution in web pages.
+
+Object-Oriented: Uses objects and prototypes (ES6 introduced class syntax).
+
+Event-Driven: Responds to user actions like clicks, typing, or mouse movements.
+
+Platform Independent: Works on all operating systems and browsers.
+
+Case-Sensitive: Variable and function names are case-sensitive.

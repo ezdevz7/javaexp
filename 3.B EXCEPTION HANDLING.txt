@@ -1,0 +1,46 @@
+// Save this file as ExceptionHandlingDemo.java
+
+public class ExceptionHandlingDemo {
+    public static void main(String[] args) {
+        try {
+            int a = 10;
+            int b = 0;
+            int result = a / b; // This will throw ArithmeticException
+            System.out.println("Result: " + result);
+        } 
+        catch (ArithmeticException e) {
+            System.out.println("Exception caught: Division by zero is not allowed.");
+        } 
+        finally {
+            System.out.println("Finally block executed.");
+        }
+
+        System.out.println("Program continues after exception handling.");
+    }
+}
+
+
+
+
+
+
+theory -
+
+
+Exception Handling is a mechanism in Java used to handle runtime errors and maintain the normal flow of a program. An exception is an unwanted or unexpected event that occurs during the execution of a program — for example, dividing a number by zero or accessing an invalid array index.
+
+Java provides a robust exception-handling framework to detect, catch, and handle such errors gracefully using keywords like try, catch, throw, throws, and finally.
+
+Types of Exceptions
+
+• Checked Exceptions
+These are exceptions that are checked at compile time. The programmer must handle them using try-catch or declare them using throws.
+Examples: IOException, SQLException
+
+• Unchecked Exceptions
+These occur at runtime and are not checked during compilation. They usually indicate programming errors such as logic or input mistakes.
+Examples: ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException
+
+• Errors
+These represent serious system-level problems that applications should not attempt to handle. They occur due to system failures or resource exhaustion.
+Examples: OutOfMemoryError, StackOverflowError

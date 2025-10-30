@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>My Simple Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f9;
+      color: #333;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #4CAF50;
+    }
+    a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      background: #333;
+      color: white;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Simple Website</h1>
+    <p>This is a very simple website made with HTML + CSS</p>
+  </header>
+
+  <main>
+    <h2>About</h2>
+    <p>I am learning HTML and CSS. This is my first styled web page.</p>
+
+    <h2>Links</h2>
+    <ul>
+      <li><a href="https://www.google.com" target="_blank">Go to Google</a></li>
+      <li><a href="https://www.wikipedia.org" target="_blank">Go to Wikipedia</a></li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>You can email me at <a href="mailto:example@example.com">example@example.com</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Simple Website</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+theory -  
+
+Web Development is broadly divided into two parts:
+
+Front-end (Client-side): What the user sees and interacts with — built using HTML, CSS, and JavaScript.
+
+Back-end (Server-side): What happens behind the scenes — handled by languages like Java, PHP, Python, and databases.
+
+HTML (HyperText Markup Language)
+
+HTML is the foundation of every website. It defines the structure and layout of a webpage using various tags and elements.
+Examples:
+<h1>–<h6> for headings, <p> for paragraphs, <a> for links, <ul>/<ol> for lists, <div> and <section> for grouping content.
+HTML is not a programming language; it’s a markup language that tells the browser how to display content.
+
+CSS (Cascading Style Sheets)
+
+CSS adds style and design to HTML pages. It controls fonts, colors, layouts, spacing, and responsiveness.
+It follows the principle of separation of concerns — HTML for structure, CSS for style.
+Ways to apply CSS:
+
+Inline CSS – inside an element tag
+
+Internal CSS – inside <style> in the head section
+
+External CSS – in a separate .css file linked using <link>
+
+HTML + CSS Together
+
+HTML provides the content and structure, while CSS defines the look and feel.
+Together, tSShey create visually appealing, responsive, and easy-to-maintain websites.

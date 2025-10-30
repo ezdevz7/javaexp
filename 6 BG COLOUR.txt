@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Auto Background Color Change</title>
+  <script type="text/javascript">
+    var colors = ["#FFB6C1", "#ADD8E6", "#90EE90", 
+"#FFD700", "#FF7F50"];
+    var index = 0;
+
+    function changeColor() {
+      document.body.style.backgroundColor = colors[index];
+      index = (index + 1) % colors.length;
+    }
+
+    setInterval(changeColor, 5000);
+  </script>
+</head>
+<body>
+  <h2 style="text-align:center;">Background 
+changes every 5 seconds</h2>
+</body>
+</html>
+
+
+
+theory -
+
+Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents a webpage as a tree structure, allowing programs to access and modify its content, structure, and style dynamically.
+
+Using JavaScript, developers can interact with the DOM to make webpages interactive. The document object represents the entire HTML page, and properties like document.body.style can be used to change visual elements such as background color.
+
+In the given program, an array of colors and the setInterval() function are used to change the background color every 5 seconds. Each time the timer runs, the DOM updates the page’s background color—creating a dynamic and visually appealing effect.

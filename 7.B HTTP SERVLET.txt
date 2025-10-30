@@ -1,0 +1,65 @@
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+public class MyHttpServlet extends HttpServlet {
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        response.setContentType("text/html");
+        response.getWriter().println("<h1>Hello from HTTP Servlet (GET)!</h1>");
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        response.setContentType("text/html");
+        response.getWriter().println("<h1>Hello from HTTP Servlet (POST)!</h1>");
+    }
+}
+
+
+
+
+
+theory -
+
+
+Java Servlet is a Java program that runs on a web server or application server. It handles client requests, processes them, and generates dynamic web responses. Servlets form the backbone of Java-based web applications.
+
+Features
+
+Run on the server side.
+
+Handle complex client requests efficiently.
+
+Generate dynamic and platform-independent responses.
+
+Types of Servlets
+
+1. GenericServlet
+
+An abstract class that implements the Servlet interface.
+
+Protocol-independent (not limited to HTTP).
+
+Provides basic lifecycle methods like init(), service(), and destroy().
+
+2. HttpServlet
+
+Extends GenericServlet.
+
+Specifically handles HTTP requests and responses.
+
+Provides methods such as:
+
+doGet() – for GET requests
+
+doPost() – for POST requests
+
+doPut(), doDelete(), etc.
